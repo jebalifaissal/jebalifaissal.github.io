@@ -1,0 +1,168 @@
+/* Modern 2026 About Section Design */
+.about-modern {
+  padding: 100px 0;
+  background: var(--background-color, #ffffff);
+  position: relative;
+}
+
+.about-modern .section-title h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+  color: var(--heading-color, #0563bb);
+}
+
+.about-modern .section-title h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 50%;
+  height: 4px;
+  background: linear-gradient(90deg, #0563bb, #61DAFB);
+  border-radius: 2px;
+}
+
+/* Card for Image and Contact Info */
+.about-profile-card {
+  background: var(--surface-color, #ffffff);
+  border-radius: 24px;
+  padding: 30px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.about-profile-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 120px;
+  background: linear-gradient(135deg, #0563bb, #034b8e);
+  z-index: -1;
+}
+
+.about-profile-card img {
+  border-radius: 20px;
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border: 5px solid #ffffff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.about-info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.about-info-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  font-size: 1.05rem;
+  color: var(--default-color, #45505b);
+}
+
+.about-info-list li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.about-info-list i {
+  color: #0563bb;
+  font-size: 1.2rem;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  margin-right: 15px;
+  background: rgba(5, 99, 187, 0.1);
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.about-info-list strong {
+  min-width: 100px;
+  color: var(--heading-color, #0563bb);
+}
+
+/* About Me Text */
+.about-me-content {
+  padding: 20px 40px;
+}
+
+.about-me-content h3 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--heading-color, #45505b);
+  margin-bottom: 20px;
+}
+
+.about-me-text {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--default-color, #45505b);
+  position: relative;
+  padding-left: 20px;
+  border-left: 4px solid #0563bb;
+  background: rgba(5, 99, 187, 0.03);
+  padding: 25px;
+  border-radius: 0 15px 15px 0;
+}
+
+/* Modern Skills Bars */
+.modern-skills-container {
+  margin-top: 40px;
+}
+
+.modern-skills-container h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: var(--heading-color, #45505b);
+}
+
+.modern-skill-item {
+  margin-bottom: 20px;
+}
+
+.modern-skill-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--heading-color, #45505b);
+}
+
+.modern-skill-bar {
+  height: 10px;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.modern-skill-progress {
+  height: 100%;
+  background: linear-gradient(90deg, #0563bb, #61DAFB);
+  border-radius: 10px;
+  width: 0; /* Animated via AOS or JS */
+  transition: width 1.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .about-me-content {
+    padding: 20px 0;
+    margin-top: 30px;
+  }
+}

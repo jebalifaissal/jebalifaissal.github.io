@@ -1,0 +1,165 @@
+/* Modern 2026 Resume Section Design */
+.resume-modern {
+  padding: 100px 0;
+  background: var(--surface-color, #f8f9fa);
+}
+
+.resume-modern .section-title h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+  color: var(--heading-color, #0563bb);
+}
+
+.resume-modern .section-title h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 50%;
+  height: 4px;
+  background: linear-gradient(90deg, #0563bb, #61DAFB);
+  border-radius: 2px;
+}
+
+.resume-modern .resume-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  color: var(--heading-color, #45505b);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.resume-modern .resume-title i {
+  color: #0563bb;
+  background: rgba(5, 99, 187, 0.1);
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 1.5rem;
+}
+
+/* Timeline container */
+.timeline-modern {
+  position: relative;
+  padding-left: 30px;
+}
+
+.timeline-modern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: rgba(5, 99, 187, 0.2);
+  border-radius: 2px;
+}
+
+/* Timeline Item / Card */
+.resume-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 25px 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.resume-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+  border-color: rgba(5, 99, 187, 0.1);
+}
+
+/* Glowing dot */
+.resume-card::before {
+  content: '';
+  position: absolute;
+  top: 35px;
+  left: -37px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #0563bb;
+  border: 4px solid #f8f9fa;
+  box-shadow: 0 0 0 4px rgba(5, 99, 187, 0.2);
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.resume-card:hover::before {
+  background: #61DAFB;
+  box-shadow: 0 0 10px #61DAFB, 0 0 0 4px rgba(97, 218, 251, 0.3);
+}
+
+/* Card Content */
+.resume-card h4 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #0563bb;
+  margin-bottom: 10px;
+}
+
+.resume-card .duration-badge {
+  display: inline-block;
+  background: rgba(5, 99, 187, 0.1);
+  color: #0563bb;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.resume-card .company {
+  font-style: normal;
+  font-weight: 600;
+  color: #45505b;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.resume-card p {
+  color: #45505b;
+  line-height: 1.6;
+}
+
+.resume-card ul {
+  padding-left: 20px;
+  margin-bottom: 0;
+  color: #45505b;
+}
+
+.resume-card ul li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+/* Tech stack badges inside resume */
+.resume-tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.resume-tech-badge {
+  background: #f1f3f5;
+  color: #495057;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}

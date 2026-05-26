@@ -1,0 +1,201 @@
+/* Tech Skills Section Custom CSS */
+.tech-skills {
+  padding: 60px 0;
+}
+
+.tech-card {
+  background: var(--surface-color, #ffffff);
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tech-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.tech-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--background-color, #f8f9fa);
+  transition: all 0.3s ease;
+}
+
+.tech-card:hover .tech-icon {
+  background: var(--accent-color, #0563bb);
+  color: #fff;
+}
+
+/* Specific colors for icons (optional, could use main color) */
+.tech-icon.android { color: #3DDC84; }
+.tech-icon.java { color: #f89820; }
+.tech-icon.react, .tech-icon.reactnative { color: #61DAFB; }
+.tech-icon.firebase { color: #FFCA28; }
+.tech-icon.sql { color: #00758F; }
+
+.tech-card span {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: var(--heading-color, #45505b);
+}
+
+.tech-level {
+  width: 100%;
+  height: 8px;
+  background-color: var(--background-color, #e9ecef);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: auto;
+}
+
+.tech-bar {
+  height: 100%;
+  width: 0; /* Initial state for animation */
+  background-color: var(--accent-color, #0563bb);
+  border-radius: 4px;
+  transition: width 1.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Animation trigger */
+.tech-card.animated .tech-bar {
+  width: var(--bar-width);
+}
+
+/* Tools Grid */
+.tools-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.tool-badge {
+  background: var(--surface-color, #ffffff);
+  border: 1px solid var(--border-color, #e9ecef);
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 500;
+  color: var(--default-color, #45505b);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+.tool-badge i {
+  font-size: 1.2rem;
+  color: var(--accent-color, #0563bb);
+}
+
+.tool-badge:hover {
+  background: var(--accent-color, #0563bb);
+  color: #ffffff;
+  border-color: var(--accent-color, #0563bb);
+  transform: translateY(-3px);
+}
+
+.tool-badge:hover i {
+  color: #ffffff;
+}
+
+/* Dark mode compatibility if needed */
+.dark-background .tech-card {
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.dark-background .tech-icon {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.dark-background .tech-card span {
+  color: #fff;
+}
+
+.dark-background .tech-level {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark-background .tool-badge {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+/* Languages & Soft Skills Section */
+.languages-skills {
+  padding: 60px 0;
+  background-color: var(--background-color, #f8f9fa);
+}
+
+.custom-card {
+  border-radius: 15px;
+  background: var(--surface-color, #ffffff);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
+}
+
+.language-item .progress {
+  background-color: var(--border-color, #e9ecef);
+  border-radius: 10px;
+  overflow: visible;
+}
+
+.language-item .progress-bar {
+  background-color: var(--accent-color, #0563bb);
+  border-radius: 10px;
+  position: relative;
+}
+
+.soft-skills-badge {
+  background-color: rgba(5, 99, 187, 0.1);
+  color: var(--accent-color, #0563bb);
+  border: 1px solid rgba(5, 99, 187, 0.2);
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.soft-skills-badge:hover {
+  background-color: var(--accent-color, #0563bb);
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+.dark-background .custom-card {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.dark-background .soft-skills-badge {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.dark-background .soft-skills-badge:hover {
+  background-color: var(--accent-color, #0563bb);
+  border-color: var(--accent-color, #0563bb);
+}
